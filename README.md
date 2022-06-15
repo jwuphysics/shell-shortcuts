@@ -10,6 +10,11 @@ find . -name "*.jpg" -type f -size -64c
 ```
 Note that `-size -64c` means size less than 64 bytes. You could do `-size +1k` to find files above 1 kb.
 
+## Moving lots of files
+```
+find source_dir -name '*.jpg' -exec mv {} destination_dir \;
+```
+
 ## Multiple downloads from file
 
 Assume that `url_list.txt` is formatted like:
