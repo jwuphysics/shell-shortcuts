@@ -30,9 +30,9 @@ xargs < ./url_list.txt -P 8 -L 1 wget -q --no-clobber -O
 
 ## Scrubbing a git commit from history
 
-Assume that `e5e0d5b` is the hash of the last good commit. We can do a hard reset, and then force a push to main. *Caution: this is bad practice if anybody else is using your repo.*
+Assume that `e5e0d5b` is the hash of the last good commit. We can do a hard reset, and then force a push to main. 
 ```
 git reset --hard e5e0d5b
 git push --force origin main
 ```
-
+*Caution: this is bad practice if anybody else is using your repo.*
