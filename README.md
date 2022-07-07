@@ -28,6 +28,20 @@ Then download 8 files at a time with `wget` using.
 xargs < ./url_list.txt -P 8 -L 1 wget -q --no-clobber -O
 ```
 
+## Untar and combine a bunch of split-up files
+
+If you have a bunch of files like
+```
+archived_files.tar.gz.aa
+archived_files.tar.gz.ab
+archived_files.tar.gz.ac
+```
+
+Then you can untar and combine them by using:
+```
+cat archived_files.tar.gz.* | tar xzf -
+```
+
 ## Scrubbing a git commit from history
 
 Assume that `e5e0d5b` is the hash of the last good commit. We can do a hard reset, and then force a push to main. 
